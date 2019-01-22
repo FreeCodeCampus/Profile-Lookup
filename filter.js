@@ -27,7 +27,8 @@ const contacts = [
 
 let lookUpProfile = (name, prop) => {
   const filteredName = contacts.filter(item => item["firstName"] === name)
-  console.log(filteredName)
+  const result = filteredName.length ? (filteredName[0][prop] ? filteredName[0][prop] : "No such property") : "No such contact"
+  console.log(result)
 }
 
 lookUpProfile("Akira", "number")
